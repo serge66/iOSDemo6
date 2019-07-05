@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import <FlutterPluginRegistrant/GeneratedPluginRegistrant.h>
+#import "ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    DemoRouter *router = [DemoRouter sharedRouter];
+    [FlutterBoostPlugin.sharedInstance startFlutterWithPlatform:router
+                                                        onStart:^(FlutterViewController *fvc) { }];
+    
+    //添加导航
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[[ViewController alloc]init]];
+    
+    
+//    [GeneratedPluginRegistrant registerWithRegistry:self];
+    
     return YES;
 }
 
