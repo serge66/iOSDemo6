@@ -29,7 +29,7 @@
     [button setBackgroundColor:[UIColor blueColor]];
     button.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
     [self.view addSubview:button];
-//    [self saveNSUserDefaults];
+    //    [self saveNSUserDefaults];
 }
 
 - (void)handleButtonAction {
@@ -44,24 +44,24 @@
     NSLog(@"打印log: %@", @"1111111111");
     //获取当前导航
     
-        UINavigationController *navi = [self getCurrentNCFrom:self];
-        DemoRouter.sharedRouter.navigationController = navi;
+    UINavigationController *navi = [self getCurrentNCFrom:self];
+    DemoRouter.sharedRouter.navigationController = navi;
     [DemoRouter.sharedRouter openPage:@"zhuku://ChangePwd" params:@{@"present":@(YES),@"userid":@"d78aa2f971024d2a889e25d2ba2e1c5e",@"_ticket_":@"7foNAlJJJ547UBtp61V4BxdW2qkLQx2UyzhPUx44lw34kwq6OYwoUcZAMI0hyZCHvTLncC7+CFOWGTEWA6glzw=="}
-                                 animated:YES completion:^(BOOL f){}];
+                             animated:YES completion:^(BOOL f){}];
     
-//    [DemoRouter.sharedRouter openPage:@"zhuku://ChangePwd" params:@{@"present":@(YES)} animated:YES completion:^(BOOL f){}];
+    //    [DemoRouter.sharedRouter openPage:@"zhuku://ChangePwd" params:@{@"present":@(YES)} animated:YES completion:^(BOOL f){}];
     
     //这部分代码是DemoROuter中的k打开界面的代码
-//    FLBFlutterViewContainer *vc = FLBFlutterViewContainer.new;
-//    [vc setName:@"zhuku://ChangePwd" params:@{@"present":@(YES)}];
-//    [self.navigationController presentViewController:vc animated:YES completion:^{}];
-
+    //    FLBFlutterViewContainer *vc = FLBFlutterViewContainer.new;
+    //    [vc setName:@"zhuku://ChangePwd" params:@{@"present":@(YES)}];
+    //    [self.navigationController presentViewController:vc animated:YES completion:^{}];
     
-//    [DemoRouter.sharedRouter openPage:@"zhuku://ChangePwd" params:@{} animated:YES completion:^(BOOL f){
-//
-//        [FlutterBoostPlugin.sharedInstance onResultForKey:@"result_id_100" resultData:@{} params:@{}];
-//
-//    }];
+    
+    //    [DemoRouter.sharedRouter openPage:@"zhuku://ChangePwd" params:@{} animated:YES completion:^(BOOL f){
+    //
+    //        [FlutterBoostPlugin.sharedInstance onResultForKey:@"result_id_100" resultData:@{} params:@{}];
+    //
+    //    }];
     
 }
 
